@@ -12,7 +12,11 @@ function App() {
         <p>
           Primer desafio melldy monteverde!
         </p>
-        <a
+      </header> */}
+      <Navbar/>
+      {/* counter */}
+      <ItemListContainer greeting="CyberX tienda Gamer"/>
+      <a
           className="App-link"
           href="https://github.com/Melldy-Monteverde/projectreact"
           target="_blank"
@@ -20,10 +24,6 @@ function App() {
         >
           visita el repo de este proyecto!
         </a>
-      </header> */}
-      <Navbar/>
-      {/* counter */}
-      <ItemListContainer greeting="CyberX tienda Gamer"/>
     </div>
   );
 }
