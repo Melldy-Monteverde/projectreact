@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Navbar from './Componentes/Navbar/Navbar'
+import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Primer desafio melldy monteverde!
@@ -17,7 +20,10 @@ function App() {
         >
           visita el repo de este proyecto!
         </a>
-      </header>
+      </header> */}
+      <Navbar/>
+      {/* counter */}
+      <ItemListContainer greeting="CyberX tienda Gamer"/>
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.Navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(41, 39, 39);
+
+    margin: 0;
+    padding-bottom: .5rem;
+}
+
+.navbar-title {
+    color: #55ff00;
+}
