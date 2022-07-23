@@ -17,7 +17,6 @@ const Navbar = () => {
                 <Button handleClick={handleClick}>Consolas</Button>
                 <Button handleClick={handleClick}>Perifericos</Button>
                 <Button handleClick={handleClick}>Home</Button>
-                <Button handleClick={handleClick}>login</Button>
             </div>
             <CartWidget/>
         </nav>
