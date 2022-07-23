@@ -1,5 +1,8 @@
 .cart-container {
     border-radius: 50%;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5rem;
 }
 .cartLogo {
     width: 60px;
