@@ -2,20 +2,20 @@
 import './App.css';
 import Navbar from './Componentes/Navbar/Navbar'
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer'
+import Counter from './Componentes/Counter/Counter'
 
 
 function App() {
+
+  const handleOnAdd = (quantity) => {
+    console.log(`productos en el cart: ${quantity}`)
+  }
+
   return (
+    
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Primer desafio melldy monteverde!
-        </p>
-      </header> */}
       <Navbar/>
-      {/* counter */}
-      <ItemListContainer greeting="CyberX tienda Gamer"/>
+      
       <a
           className="App-link"
           href="https://github.com/Melldy-Monteverde/projectreact"
@@ -23,7 +23,12 @@ function App() {
           rel="noopener noreferrer"
         >
           visita el repo de este proyecto!
-        </a>
+      </a>
+
+      <ItemListContainer greeting="CyberX tienda Gamer"/>
+
+      <Counter stock={10} onAdd={handleOnAdd}/>
+
     </div>
   );
 }
