@@ -1,0 +1,22 @@
+.li-products {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1rem 40%;
+}
+
+h3 {
+    background-color: lightgray;
+}
+
+img {
+    width: fit-content;
+}
+
+.verDetalle {
+    margin: 5px auto;
+}

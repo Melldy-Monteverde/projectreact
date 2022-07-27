@@ -1,9 +1,23 @@
-const Button = ({handleClick, color, children, margin, borderRadius}) => {
+import React, { useEffect } from 'react'
+
+const Button = () => {
+
+    const handleClick = () => {
+        console.log('Hello world')
+    }
+
+    useEffect(() =>{
+        const button = document.getElementById('button')
+
+        button.addEventListener('click', handleClick)
+
+        return () => {
+            button.removeEventListener('click', handleClick)
+        }
+    }, [])
 
     return (
-        <button onClick={handleClick} style={{ color: color, margin: margin, borderRadius:borderRadius}}>
-            {children}
-        </button>
+        <button id="button">Button</button>
     )
 }
 
