@@ -1,34 +1,28 @@
-// import logo from './logo.svg';
 import './App.css';
-import Navbar from './Componentes/Navbar/Navbar'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NavbarPrinc from './Componentes/Navbar/Navbar'
 import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer'
-import Counter from './Componentes/Counter/Counter'
-
+import ItemDetailContainer from './Componentes/ItemDetailContainer/ItemDetailContainer.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  const handleOnAdd = (quantity) => {
-    console.log(`productos en el cart: ${quantity}`)
-  }
-
-  return (
+    return (
     
-    <div className="App">
-      <Navbar/>
-      
-      <a
-          className="App-link"
-          href="https://github.com/Melldy-Monteverde/projectreact"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          visita el repo de este proyecto!
-      </a>
-
-      <ItemListContainer greeting="CyberX tienda Gamer"/>
-
-      <Counter stock={10} onAdd={handleOnAdd}/>
-
+    <div className="App continer">
+      <BrowserRouter>
+        <NavbarPrinc/>
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting='Wellcome to CyberX Game store' />} />
+          <Route path="/categoria/:categoryID" element={<ItemListContainer greeting='Productos filtrados' className="title"/>} />
+          <Route path="/detalle/:productId" element={<ItemDetailContainer />} />
+          <Route path="*" element={
+            <div className='container404'>
+              <h1 className="errorText">404 - Página no encontrada</h1>
+              <p className="textLogo">Cyber X</p>
+            </div>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

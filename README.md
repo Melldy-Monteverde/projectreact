@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# CyberX - Tienda Gamer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+Proyecto en construccion, curso React de CoderHouse 2022.
 
-In the project directory, you can run:
+Se trata de un e-commerce de juegos y consolas.
 
-### `npm start`
+## Logo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Diseño para el logo:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![CyberX](./public/images/logoCyberX.jpg)
 
-### `npm test`
+## Instalacion local
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+$ git clone [https://github.com/Melldy-Monteverde/projectreact](https://github.com/Melldy-Monteverde/projectreact)
 
-### `npm run build`
+$ cd projectreact
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para instalar las dependencias y levantar el servidor:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+$ npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+$ npm start
 
-### `npm run eject`
+## Rutas definidas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Configuradas en App.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. La ruta "/" (por default) muestra el título de bienvenida y el listado de todos los productos (ItemListContainer).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. La ruta "/categoria/:categoryID" muestra los productos filtador según cada una de las 3 categorías existentes: Juegos, Consolas, Perifericos. El componente tiene el nombre ItemListContainer + filtrado por categoria.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. La ruta "/detalle/:productId" muestra el detalle del producto seleccionado mediante el link "ver más", ubicando el producto y asociado a su id.
 
-## Learn More
+4. La ruta "*" define que toda otra ruta a la que se quiera acceder mediante el navegador del browser (y no sea alguna de las anteriores), devuelva "404 - página no encontrada" junto al logo de la App.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Detalles
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Se utilizo React-bootstrap para algunos estilos, los mimosfueron modificados.
 
-### Code Splitting
+La visual de de toda la pagina ira cambiando a medida que se van agregando funciones y estilos, por ahora esta enfocada en funcionalidad.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Screenshots
 
-### Analyzing the Bundle Size
+### Home Page
+![Home Page](./src/images/Captura%20de%20pantalla_2022-08-05_19-15-43.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Rutas
+![Rutas](./src/images/rutas.gif)
 
-### Making a Progressive Web App
+### Not found 404
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Not found](./src/images/error404.gif)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Autor
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Melldy Monteverde](https://github.com/Melldy-Monteverde)

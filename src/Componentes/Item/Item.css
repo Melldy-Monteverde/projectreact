@@ -1,6 +1,4 @@
-.li-products {
-    list-style-type: none;
-
+.itemsCardContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,13 +6,12 @@
 
     margin: 1rem 40%;
 }
-
-h3 {
-    background-color: lightgray;
-}
-
-img {
-    width: fit-content;
+.itemCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .verDetalle {

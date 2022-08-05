@@ -1,0 +1,7 @@
+.itemDetailContent {
+    max-width: 720px;
+    max-height: auto;
+    margin: 20px 30%;
+    border: 3px solid #000 !important;
+    font-size: x-large;
+}

@@ -1,26 +1,26 @@
 import './Navbar.css'
-import Button from '../Button/Botton'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
+import { Navbar } from 'react-bootstrap'
 
-const Navbar = () => {
 
-    const handleClick = () => {
-        console.log('Este click se autodestruira pronto XD')
-    }
+const NavbarPrinc = () => {
+
     return (
-        <nav className ="Navbar">
-            <div  className="navbar_title-container">
-                <h1 className="navbar-title">CyberX</h1>
+        <Navbar className="navbar justify-content-around" expand="lg">
+            <div  className="nav-title-container">
+                <Link className="navbar-title" to='/'>
+                    CyberX
+                </Link>
             </div>
-            <div className="navbar_btn-container">
-                <Button handleClick={handleClick}>Juegos</Button>
-                <Button handleClick={handleClick}>Consolas</Button>
-                <Button handleClick={handleClick}>Perifericos</Button>
-                <Button handleClick={handleClick}>Home</Button>
+            <div className="nav-btn-container">
+                <Link className="btn btn-primary btnLinks" to='/categoria/juegos'>Juegos</Link>
+                <Link className="btn btn-primary btnLinks" to='/categoria/consolas'>Consolas</Link>
+                <Link className="btn btn-primary btnLinks" to='/categoria/perifericos'>Perifericos</Link>
             </div>
             <CartWidget/>
-        </nav>
+        </Navbar>
     )
 }
 
-export default Navbar
+export default NavbarPrinc

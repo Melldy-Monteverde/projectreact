@@ -1,14 +1,14 @@
-.btn_container {
+/* .btn_container {
     background-color: #e7e7e7;
     border: 1px solid black;
     padding: 5px;
+    border-radius: 5px;
     margin-bottom: 5px;
-    width: 200px;
+    min-width: auto;
     margin: .5rem 45%;
 
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* grid-template-rows: 1fr; */
+    
     gap: .5rem;
     grid-template-areas:
         "b-rmv b-count b-add"
@@ -16,6 +16,7 @@
     ;
     
 }
+*/
 
 .btn {
     border: none;
@@ -23,18 +24,13 @@
     border: 1px solid black;
 }
 
-.btnAdd {
-    grid-area: b-add;
-}
-
-.btnRmv {
-    grid-area: b-rmv;
-}
-
 .btnAdd-cart {
-    grid-area: b-addCart;
-
-    background-color: #15ff8a;
     padding: 3px;
-    font-weight: bolder;
+    font-weight: bolder !important;
+} 
+
+.counter {
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #dbdada;
 }

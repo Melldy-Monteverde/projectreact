@@ -1,23 +1,30 @@
-import React, { useEffect } from 'react'
+// import React, { useEffect } from 'react'
+// import { NavLink } from 'react-router-dom'
+import React from 'react'
 
 const Button = () => {
 
-    const handleClick = () => {
-        console.log('Hello world')
-    }
+    // const handleClick = () => {
+    //     console.log('Hello world')
+    // }
 
-    useEffect(() =>{
-        const button = document.getElementById('button')
+    // useEffect(() =>{
+    //     const button = document.getElementById('button')
 
-        button.addEventListener('click', handleClick)
+    //     button.addEventListener('click', handleClick)
 
-        return () => {
-            button.removeEventListener('click', handleClick)
-        }
-    }, [])
+    //     return () => {
+    //         button.removeEventListener('click', handleClick)
+    //     }
+    // }, [])
 
     return (
-        <button id="button">Button</button>
+        <div>
+            <button className="btn btn-primary" id="button">Consolas</button>
+            <button className="btn btn-primary" id="button">Juegos</button>
+            <button className="btn btn-primary" id="button">Perifericos</button>
+        </div>
+        
     )
 }
 
