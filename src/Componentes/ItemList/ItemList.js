@@ -3,9 +3,10 @@ import Item from '../Item/Item'
 
 const ItemList = ({products}) => {
     return(
-        <ul className="ulList">
-            {products.map(prod => <Item key={prod.id} product ={prod}/>)}
-        </ul>
+        <div className="ulList" onClick={() => console.log('hice click en itemlist')}>
+            {products.map(prod => <Item key={prod.id} product={prod}/>)}
+            {/* {products.map(prod => <Item key={prod.id} {...prod} />)} */}
+        </div>
     )
 }
 

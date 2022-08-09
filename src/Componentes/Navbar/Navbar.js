@@ -1,6 +1,6 @@
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { Navbar } from 'react-bootstrap'
 
 
@@ -10,13 +10,13 @@ const NavbarPrinc = () => {
         <Navbar className="navbar justify-content-around" expand="lg">
             <div  className="nav-title-container">
                 <Link className="navbar-title" to='/'>
-                    CyberX
+                    <img src='./images/logoCyberX.jpg' alt='CyberX' className="logoNav"/>
                 </Link>
             </div>
             <div className="nav-btn-container">
-                <Link className="btn btn-primary btnLinks" to='/categoria/juegos'>Juegos</Link>
-                <Link className="btn btn-primary btnLinks" to='/categoria/consolas'>Consolas</Link>
-                <Link className="btn btn-primary btnLinks" to='/categoria/perifericos'>Perifericos</Link>
+                <NavLink className="btn btn-primary btnLinks" to='/categoria/juegos'>Juegos</NavLink>
+                <NavLink className="btn btn-primary btnLinks" to='/categoria/consolas'>Consolas</NavLink>
+                <NavLink className="btn btn-primary btnLinks" to='/categoria/perifericos'>Perifericos</NavLink>
             </div>
             <CartWidget/>
         </Navbar>

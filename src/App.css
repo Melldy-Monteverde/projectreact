@@ -5,7 +5,7 @@
 .title {
   margin: 10px auto;
 }
-
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -15,7 +15,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .container404 {
   display: flex;
@@ -24,11 +24,8 @@
   flex-direction: column;
 
   margin-top: 50px;
-  height: 120px;
+  padding: 5px;
+  height: auto;
   background-color: #000;
   color: #55ff00;
-}
-
-.textLogo {
-  font-size: x-large;
 }

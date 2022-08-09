@@ -19,7 +19,7 @@ function App() {
           <Route path="*" element={
             <div className='container404'>
               <h1 className="errorText">404 - Página no encontrada</h1>
-              <p className="textLogo">Cyber X</p>
+              <img src='./images/logoCyberX.jpg' alt='CyberX' className="logoNav"/>
             </div>} />
         </Routes>
       </BrowserRouter>
