@@ -17,6 +17,11 @@
     
 }
 */
+.btn_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 .btn {
     border: none;
@@ -33,4 +38,6 @@
     border: 2px solid #000;
     border-radius: 5px;
     background-color: #dbdada;
+    width: 50px;
+    height: auto;
 }
