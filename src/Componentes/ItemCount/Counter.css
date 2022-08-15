@@ -1,26 +1,10 @@
-/* .btn_container {
-    background-color: #e7e7e7;
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    min-width: auto;
-    margin: .5rem 45%;
-
-    display: grid;
-    
-    gap: .5rem;
-    grid-template-areas:
-        "b-rmv b-count b-add"
-        "b-addCart b-addCart b-addCart"
-    ;
-    
-}
-*/
 .btn_container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .btn {

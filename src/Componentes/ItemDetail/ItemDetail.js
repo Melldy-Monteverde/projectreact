@@ -31,18 +31,18 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     return (
         <Card className="itemDetailContent shadow-lg p-3 mb-5 bg-body rounded">
-            <Card.Img variant="top" src={img} alt={name} />
+            <Card.Img variant="top" src={img} alt={name} className="cardImg" />
             <Card.Body>
-                <Card.Title>{category}</Card.Title>
+                <Card.Title className="cardCategory">{category}</Card.Title>
                 <Card.Title>{name}</Card.Title>
-                <Card.Text>{description}</Card.Text>
-                <Card.Text>${price}</Card.Text>
+                <Card.Text className="cardDescription">{description}</Card.Text>
+                <Card.Text className="cardPrice">${price}</Card.Text>
                 <footer className='ItemFooter'>
                     {
                         quantityToAdd === 0 ? (
                             <ItemCount onAdd={handleOnAdd} stock={stock} initial={productQuantity}/>
                         ) : (
-                            <Link to='/cart'>Finalizar compra</Link>
+                            <Link className="cartLink" to='/cart'>Finalizar compra</Link>
                         )
                     }
                 </footer>
