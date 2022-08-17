@@ -1,15 +1,20 @@
 .cart-container {
-    border-radius: 50%;
-    color: #000;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    background-color: #efefef;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    width: 50px;
+    justify-content: space-around;
     border-radius: 5px;
-    padding: 5px;
     text-decoration: none;
+    font-weight: bolder;
+    /* padding: 3px; */
+    padding-right: 5px;
+    color: black;
+    font-size: x-large;
 }
 .cartLogo {
-    width: 50px;
-    height: 30px;
-    margin: auto;
+    min-width: 40px;
+    max-height: 30px;
 }

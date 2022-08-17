@@ -5,6 +5,7 @@ import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from './Componentes/ItemDetailContainer/ItemDetailContainer.js'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartContextProvider } from './context/CartContext'
+import CartView from './Componentes/CarView/Cart'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<ItemListContainer greeting='Wellcome to CyberX Game store' />} />
             <Route path="/categoria/:categoryID" element={<ItemListContainer greeting='Productos filtrados' className="title"/>} />
             <Route path="/detalle/:productId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<CartView />} />
             <Route path="*" element={
               <div className='container404'>
                 <h1 className="errorText">404 - Página no encontrada</h1>
