@@ -51,21 +51,12 @@ export const CartContextProvider = ({ children }) => {
         return product?.quantity
     }
 
-    // const totalPrice = () => {
-
-    //     let precioTotal = 0;
-
-    //     cart.forEach(prod => {
-    //         precioTotal += parseInt(prod.price) * prod.quantity
-    //         console.warn(precioTotal)
-    //     })
-    //     return precioTotal
-    // }
-
     const addQuantity = (id) => {
         const newCart = cart.map(product => {
             if (product.id === id) {
-                const productoActualizado = { ...product, quantity: product.quantity += 1 }
+                // const productoActualizado = { ...product, quantity: product.quantity + 1 }
+                const productoActualizado = { ...product, quantity: product.quantity  < product.stock ? product.quantity + 1 :  product.quantity = product.stock }
+
                 return productoActualizado
             } else {
                 return product
@@ -77,7 +68,8 @@ export const CartContextProvider = ({ children }) => {
     const lessQuantity = (id) => {
         const newCart = cart.map(product => {
             if (product.id === id) {
-                const productoActualizado = { ...product, quantity: product.quantity -= 1 }
+                // const productoActualizado = { ...product, quantity: product.quantity -= 1 }
+                const productoActualizado = { ...product, quantity: product.quantity  > 1 ? product.quantity - 1: product.quantity = 1 }
                 return productoActualizado
             } else {
                 return product

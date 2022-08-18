@@ -36,6 +36,8 @@ Configuradas en App.js
 
 4. La ruta "*" define que toda otra ruta a la que se quiera acceder mediante el navegador del browser (y no sea alguna de las anteriores), devuelva "404 - página no encontrada" junto al logo de la App.
 
+5. Laruta "/cart", lleva al carrito de compras para ver el listado de productos agregados, donde se podra sumar, restar o eliminar productos por unidad, mismo vaciar el carrito. Tambien es posible navegar al catalo desde esta ruta, y en caso de qeu el carrito de compras este vacio, se indicara que no hay productos agregados y se habilita un boton para volver al catalogo.
+
 ## Detalles
 
 Se utilizo React-bootstrap para algunos estilos, los mimosfueron modificados.
@@ -43,6 +45,9 @@ Se utilizo React-bootstrap para algunos estilos, los mimosfueron modificados.
 La visual de de toda la pagina ira cambiando a medida que se van agregando funciones y estilos, por ahora esta enfocada en funcionalidad.
 
 ## Screenshots
+
+### Recorrido
+![Recorrido completo](./src/images/recorridoCompleto.gif)
 
 ### Home Page
 ![Home Page](./src/images/Captura%20de%20pantalla_2022-08-05_19-15-43.png)

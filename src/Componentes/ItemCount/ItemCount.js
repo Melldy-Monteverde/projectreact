@@ -15,9 +15,9 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
 
     return (
         <div className="btn_container">
-            <button className="btn btnRmv" onClick={decrement}>-</button>
+            <button className="btn btnRmv" disabled={quantity <= initial} onClick={decrement}>-</button>
             <h3 className="counter">{quantity}</h3>
-            <button className="btn btnAdd" onClick={increment}>+</button>
+            <button className="btn btnAdd" disabled={quantity >= stock} onClick={increment}>+</button>
             <button className="btn btnAdd-cart btn-success" onClick={() => onAdd(quantity)}>
                 Agregar al carrito
             </button>

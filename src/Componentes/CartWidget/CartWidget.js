@@ -2,6 +2,7 @@ import './CartWidget.css'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartContext from '../../context/CartContext'
+import { FaShoppingCart } from 'react-icons/fa';
 
 const CartWidget = () => {
     const { getQuantity } = useContext(CartContext)
@@ -10,7 +11,7 @@ const CartWidget = () => {
     return (
         quantity > 0 ? (
             <Link to='/cart' className="cart-container">
-                <img src='/images/cart.svg' alt='CartWidget' className="cartLogo"/>
+                <FaShoppingCart />
                 <span className="cartCounter">{ quantity }</span>
             </Link>
         ) : (

@@ -3,6 +3,7 @@ import "./Cart.css";
 import CartContext from "../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { FaTrashAlt } from 'react-icons/fa'
 
 const CartView = () => {
   const { cart, removeItem, clearCart, getQuantity, addQuantity, lessQuantity } = useContext(CartContext);
@@ -44,22 +45,24 @@ const CartView = () => {
                   <td>$ {product.price}</td>
                   <td className="btnTableCount">
                     <button
-                      disabled={product.quantity >= product.stock}
-                      onClick={() => addQuantity(product.id)}
-                    >
-                      {" "}+{" "}
-                    </button>
-                    {" "}{product.quantity}
-                    <button
                       disabled={product.quantity <= 1}
                       onClick={() => lessQuantity(product.id)}
                     >
                       {" "}-{" "}
                     </button>
+
+                    {" "}{product.quantity}{" "}
+
+                    <button
+                      disabled={product.quantity >= product.stock}
+                      onClick={() => addQuantity(product.id)}
+                    >
+                      {" "}+{" "}
+                    </button>
                   </td>
                   <td>$ {product.price * product.quantity}</td>
                   <td>
-                    <button onClick={() => removeItem(product.id)} className="btn btn-eliminar">Eliminar</button>
+                    <button onClick={() => removeItem(product.id)} className="btn btn-eliminar"><FaTrashAlt /></button>
                   </td>
                 </tr>
               ))}

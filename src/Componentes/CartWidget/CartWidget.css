@@ -9,12 +9,8 @@
     border-radius: 5px;
     text-decoration: none;
     font-weight: bolder;
-    /* padding: 3px; */
-    padding-right: 5px;
+    padding: 3px;
+    min-width: 75px;
     color: black;
     font-size: x-large;
-}
-.cartLogo {
-    min-width: 40px;
-    max-height: 30px;
 }
