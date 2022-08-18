@@ -29,18 +29,6 @@ const ItemListContainer = ({ greeting }) => {
         setLoading(false);
     })
 
-    // const asyncFunction = categoryID ? getProductsByCategory : getProducts;
-
-    // asyncFunction(categoryID)
-    //   .then((products) => {
-    //     setProducts(products);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   })
-    //   .finally(() => {
-    //     setLoading(false);
-    //   });
   }, [categoryID]);
 
   if (loading) {
