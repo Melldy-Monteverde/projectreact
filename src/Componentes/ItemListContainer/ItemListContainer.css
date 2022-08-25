@@ -1,3 +1,12 @@
-.title {
+.greeting-title {
+    margin-top: 3rem;
     font-size: 3rem;
+    color: #000;
+}
+
+.spinner {
+    margin-top: 100px;
+    color: #000;
+    min-width: 100px;
+    min-height: 100px;
 }

@@ -25,13 +25,6 @@ const ItemDetailContainer = ({ addItem }) => {
         setLoading(false);
     })
     
-    // getProductsById(productId)
-    //   .then((responde) => {
-    //     setProductDetail(responde);
-    //   })
-    //   .finally(() => {
-    //     setLoading(false);
-    //   });
   }, [productId]);
 
   if (loading) {
@@ -44,7 +37,7 @@ const ItemDetailContainer = ({ addItem }) => {
 
   return (
     <div>
-      <h1>Detalle</h1>
+      <h1 className="detailTitel">Detalle</h1>
       <ItemDetail {...product} addItem={addItem} />
     </div>
   );

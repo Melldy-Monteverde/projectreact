@@ -1,6 +1,5 @@
 import "./ItemListContainer.css";
 import { useState, useEffect } from "react";
-// import { getProducts, getProductsByCategory } from "../../asyncMock";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import Spinner from "react-bootstrap/Spinner";
@@ -33,15 +32,15 @@ const ItemListContainer = ({ greeting }) => {
 
   if (loading) {
     return (
-      <Spinner animation="border" role="status" className="spiner">
+      <Spinner animation="border" role="status" className="spinner">
         <span className="visually-hidden">Cargando...</span>
       </Spinner>
     );
   }
 
   return (
-    <div onClick={() => console.log("click en itemlistcontainer")}>
-      <h1 className="title">{`${greeting} ${categoryID || ""}`}</h1>
+    <div>
+      <h1 className="greeting-title">{`${greeting} ${categoryID || ""}`}</h1>
       <ItemList products={products} />
     </div>
   );
