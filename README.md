@@ -40,24 +40,27 @@ Configuradas en App.js
 
 ## Detalles
 
-Se utilizo React-bootstrap para algunos estilos, los mimosfueron modificados.
+Librerias extras:
+
+* React-bootstrap para algunos estilos, los mimos fueron modificados.
+* React-icons para agregar iconos.
 
 La visual de de toda la pagina ira cambiando a medida que se van agregando funciones y estilos, por ahora esta enfocada en funcionalidad.
 
 ## Screenshots
 
-### Recorrido
-![Recorrido completo](./src/images/recorridoCompleto.gif)
+### Recorrido completo
+![Recorrido completo](src/images/recorridoCompra.gif)
 
-### Home Page
-![Home Page](./src/images/Captura%20de%20pantalla_2022-08-05_19-15-43.png)
+### Recorrido vista con Firebase
+![Recorrido y generacion de ID compra](./src/images/recorridoCompraGeneracionId.gif)
 
-### Rutas
-![Rutas](./src/images/rutas.gif)
+### Recorrido sin items en el cart
+![Cart sin productos](./src/images/cartSinProductos.gif)
 
 ### Not found 404
 
-![Not found](./src/images/error404.gif)
+![Not found](./src/images/notFound404.gif)
 
 ---
 
