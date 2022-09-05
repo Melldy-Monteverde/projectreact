@@ -4,17 +4,17 @@
 
 .btnLinks {
     margin: auto 5px;
-    background-color: #55ff00 !important;
-    border: none !important;
-    color: #000 !important;
-    font-weight: bolder !important;
+    background-color: #55ff00;
+    border: none;
+    color: #000;
+    font-weight: bolder;
 }
 
 .btnLinks:hover {
-    border: 2px solid #55ff00 !important;
-    background-color: #000 !important;
-    color: #55ff00 !important;
-    font-weight: bolder !important;
+    border: 2px solid #55ff00;
+    background-color: #000;
+    color: #55ff00;
+    font-weight: bolder;
 }
 
 .logoNav {

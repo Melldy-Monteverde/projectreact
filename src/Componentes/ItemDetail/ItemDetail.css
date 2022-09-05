@@ -1,7 +1,7 @@
 .itemDetailContent {
     max-height: auto;
     margin: 20px;
-    border: 3px solid #000 !important;
+    border: 3px solid #000;
     font-size: x-large;
 
     display: flex;
