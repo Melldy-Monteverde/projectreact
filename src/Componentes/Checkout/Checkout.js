@@ -1,8 +1,9 @@
-import "./Checkout.css";
-import { Link } from 'react-router-dom'
+// import "./Checkout.css";
+import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import CartContext from "../../context/CartContext";
 import { dataBase } from "../../services/firebase/index";
+import Form from "./Form";
 import {
   addDoc,
   collection,
@@ -17,49 +18,23 @@ import { useNavigate } from "react-router-dom";
 const Checkout = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [orderCreated, setOrderCreated] = useState(false);
-  const { cart, getQuantity, getTotal, clearCart } = useContext(CartContext);
-
+  const { cart, getQuantity, getTotal, clearCart, buyer } = useContext(CartContext);
   const navigate = useNavigate();
 
   const totalQuantity = getQuantity();
   const total = getTotal();
 
-  const [data, setData] = useState({
-    nombre: "",
-    apellido: "",
-    email: "",
-    direccion: "",
-    telefono: "",
-  });
-
   const [orderId, setOrderId] = useState("");
-
-  const handleChange = (e) => {
-    setData({
-      ...data,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
 
   const createOrder = async () => {
     setIsLoading(true);
     try {
       const objOrder = {
-        buyer: {
-          firstName: data.nombre,
-          lastName: data.apellido,
-          phone: data.telefono,
-          address: data.direccion,
-          email: data.email,
-        },
-        items: cart,
-        totalQuantity,
-        total,
-        date: new Date(),
+          buyer,
+          items: cart,
+          totalQuantity,
+          total,
+          date: new Date(),
       };
 
       const ids = cart.map((prod) => prod.id);
@@ -102,9 +77,6 @@ const Checkout = () => {
         setOrderId(orderAdded.id);
         setOrderCreated(true);
 
-        // setTimeout(() => {
-        //   navigate("/");
-        // }, 3000);
       } else {
         console.log(
           `No hay stock suficiente para los siguientes productos: ${noStock.map(
@@ -116,7 +88,6 @@ const Checkout = () => {
             (item) => item.name
           )}`
         );
-        //  agregar un link de volver a carrito para sacar el item sin stock del carrito
         navigate("/cart");
       }
     } catch (error) {
@@ -133,11 +104,12 @@ const Checkout = () => {
   if (orderCreated) {
     return (
       <div className="orderDetail">
-        <h1 className="orderSucceful">
-          Orden generada con exito!
-        </h1>
+        <h1 className="orderSucceful">Orden generada con exito!</h1>
+        <h2 className="orderSucceful">Gracias por tu  compra {buyer.firstName}</h2>
         <span className="orderId">El id de su orden es: {orderId}</span>
-        <Link className="navbar-title btn btn-primary" to='/'>Ir al catalogo</Link>
+        <Link className="navbar-title btn btn-primary" to="/">
+          Ir al catalogo
+        </Link>
       </div>
     );
   }
@@ -145,52 +117,7 @@ const Checkout = () => {
   return (
     <div className="orderContainer">
       <h1 className="orderTitle">Datos para la entrega</h1>
-      <form onSubmit={handleSubmit} className="paymentForm">
-        <input
-          type="text"
-          name="nombre"
-          placeholder="Nombre"
-          value={data.nombre}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="apellido"
-          placeholder="Apellido"
-          value={data.apellido}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="email"
-          placeholder="Correo"
-          value={data.email}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="number"
-          name="telefono"
-          placeholder="Teléfono"
-          value={data.telefono}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="direccion"
-          placeholder="Dirección"
-          value={data.direccion}
-          onChange={handleChange}
-          required
-        />
-
-        <button type="submit" onClick={createOrder} className="btn btn-success">
-          Generar Orden
-        </button>
-      </form>
+      <Form createOrder={createOrder} className="paymentForm"/>
       <img src="./images/logoCyberX.jpg" alt="CyberX" className="logoNav" />
     </div>
   );
