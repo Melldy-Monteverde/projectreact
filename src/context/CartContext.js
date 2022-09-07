@@ -71,7 +71,6 @@ export const CartContextProvider = ({ children }) => {
     const addQuantity = (id) => {
         const newCart = cart.map(product => {
             if (product.id === id) {
-                // const productoActualizado = { ...product, quantity: product.quantity + 1 }
                 const productoActualizado = { ...product, quantity: product.quantity  < product.stock ? product.quantity + 1 :  product.quantity = product.stock }
 
                 return productoActualizado
@@ -85,7 +84,6 @@ export const CartContextProvider = ({ children }) => {
     const lessQuantity = (id) => {
         const newCart = cart.map(product => {
             if (product.id === id) {
-                // const productoActualizado = { ...product, quantity: product.quantity -= 1 }
                 const productoActualizado = { ...product, quantity: product.quantity  > 1 ? product.quantity - 1: product.quantity = 1 }
                 return productoActualizado
             } else {

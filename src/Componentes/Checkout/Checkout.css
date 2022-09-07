@@ -27,8 +27,6 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  /* border: 3px solid red; */
-  /* max-width: 500px; */
 }
 
 .orderId {
@@ -45,4 +43,8 @@ form input {
 
 .btn-success {
   max-width: 200px,
+}
+
+p.campoObligatorio {
+  color: red;
 }

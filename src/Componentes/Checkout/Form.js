@@ -2,6 +2,8 @@ import "./Checkout.css";
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
 import { useForm } from "react-hook-form";
+import { FaAsterisk } from 'react-icons/fa'
+
 
 const Form = ({ createOrder }) => {
   const {
@@ -9,7 +11,7 @@ const Form = ({ createOrder }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
+
   const { buyer, setBuyer } = useContext(CartContext);
   const { firstName, lastName, email, address, phone } = buyer;
 
@@ -40,7 +42,7 @@ const Form = ({ createOrder }) => {
           value={firstName}
           onChange={handleChange}
         />
-        {errors?.firstName && <p> ⚠ Campo obligatorio</p>}
+        {errors?.firstName && <p className="campoObligatorio"><FaAsterisk /> Campo obligatorio</p>}
         <input
           {...register("lastName", { required: true, maxLength: 10 })}
           type="text"
@@ -49,7 +51,7 @@ const Form = ({ createOrder }) => {
           value={lastName}
           placeholder="Apellido"
         />
-        {errors.lastName?.type === "required" && <p>⚠ Campo obligatorio</p>}
+        {errors.lastName?.type === "required" && <p className="campoObligatorio"><FaAsterisk /> Campo obligatorio</p>}
         <input
           {...register("email", {
             required: true,
@@ -61,8 +63,8 @@ const Form = ({ createOrder }) => {
           value={email}
           onChange={handleChange}
         />
-        {errors.email?.type === "required" && <p>⚠ Campo obligatorio</p>}
-        {errors.email?.type === "patern" && <p>⚠ Formato de email no válido</p>}
+        {errors.email?.type === "required" && <p className="campoObligatorio"><FaAsterisk /> Campo obligatorio</p>}
+        {errors.email?.type === "patern" && <p className="campoObligatorio"><FaAsterisk /> Formato de email no válido</p>}
         <input
           {...register("address", { required: true, maxLength: 10 })}
           type="text"
@@ -71,7 +73,7 @@ const Form = ({ createOrder }) => {
           value={address}
           onChange={handleChange}
         />
-        {errors.address?.type === "required" && <p>⚠ Campo obligatorio</p>}
+        {errors.address?.type === "required" && <p className="campoObligatorio"><FaAsterisk /> Campo obligatorio</p>}
         <input
           {...register("phone", {
             required: true,
@@ -84,9 +86,9 @@ const Form = ({ createOrder }) => {
           value={phone}
           onChange={handleChange}
         />
-        {errors.phone?.type === "required" && <p>⚠ Campo obligatorio</p>}
+        {errors.phone?.type === "required" && <p className="campoObligatorio"><FaAsterisk /> Campo obligatorio</p>}
         {errors.phone?.type === "patern" && (
-          <p>⚠ Formato de teléfono no válido</p>
+          <p className="campoObligatorio"><FaAsterisk /> Formato de teléfono no válido</p>
         )}
         <button type="submit" className="btn btn-success">
           Generar Orden

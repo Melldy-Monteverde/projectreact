@@ -24,4 +24,4 @@ const Item = ({ img, name, stock, id }) => {
     )
 }
 
-export default Item
+export default Item;
